@@ -1,18 +1,6 @@
 
 function getComputerChoice() {
-
-    let number = Math.floor(Math.random()*3);
-
-    if (number === 0) {
-        return "rock";
-    }
-    else if (number === 1) {
-        return "paper";
-    }
-    else {
-        return "scissors";
-    }
-
+    return Math.floor(Math.random()*3);
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -45,5 +33,3 @@ function game() {
 function getPlayerChoice() {
     return prompt();
 }
-
-game();
