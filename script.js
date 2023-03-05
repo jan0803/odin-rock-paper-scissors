@@ -1,3 +1,5 @@
+let playerScoreValue = 0;
+let computerScoreValue = 0;
 
 function getComputerChoice() {
     return Math.floor(Math.random()*3);
@@ -17,20 +19,29 @@ function playRound(playerSel, computerSel) {
         ((playerSel === 1) && (computerSel === 0)) ||
         ((playerSel === 2) && (computerSel === 1))
         ){
+        playerScoreValue++;
+        document.getElementById("player-score").innerHTML = playerScoreValue;
         return "You win!";
     }
     else {
+        computerScoreValue++;
+        document.getElementById("computer-score").innerHTML = computerScoreValue;
         return "You lose!";
     }
 
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    }
-}
 
 function getPlayerChoice() {
     return prompt();
+}
+
+function game() {
+    playerScoreValue = 0;
+    computerScoreValue = 0;
+
+    document.getElementById("rock").onclick = playRound(0,getComputerChoice());
+    document.getElementById("paper").onclick = playRound(1,getComputerChoice());
+    document.getElementById("scissors").onclick = playRound(2,getComputerChoice());
+
 }
