@@ -3,23 +3,24 @@ function getComputerChoice() {
     return Math.floor(Math.random()*3);
 }
 
-function playRound(playerSelection, computerSelection) {
+// 0 = Rock
+// 1 = Paper
+// 2 = Scissors
 
-    let playerSel = playerSelection.toLowerCase();
-    let computerSel = computerSelection.toLowerCase();
+function playRound(playerSel, computerSel) {
 
-    if (playerSel == computerSel) {
+    if (playerSel === computerSel) {
         return "It's a draw!";
     }
     else if (
-        ((playerSel == "rock") && (computerSel == "scissors")) ||
-        ((playerSel == "paper") && (computerSel == "rock")) ||
-        ((playerSel == "scissors") && (computerSel == "paper"))
+        ((playerSel === 0) && (computerSel === 2)) ||
+        ((playerSel === 1) && (computerSel === 0)) ||
+        ((playerSel === 2) && (computerSel === 1))
         ){
-        return "You win! " + playerSel + " beats " + computerSel;
+        return "You win!";
     }
     else {
-        return "You lose! " + computerSel + " beats " +playerSel;
+        return "You lose!";
     }
 
 }
