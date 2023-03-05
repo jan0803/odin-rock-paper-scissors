@@ -48,10 +48,31 @@
 
         function game() {
             for (let i = 0; i < 5; i++) {
-                console.log(playRound(playerSelection, getComputerChoice()));
+                console.log(playRound(getPlayerChoice(), getComputerChoice()));
             }
         }
 
+        function getPlayerChoice() {
+            return prompt();
+        }
+
+        game();
+
     </script>
+
+    <h1>Basic Game of Rock - Paper - Scissors</h1>
+
+    <p>Here comes the text</p>
+
+    <div class="selection-container">
+        <button class="selection-item">ROCK</button>
+        <button class="selection-item">PAPER</button>
+        <button class="selection-item">SCISSORS</button>
+    </div>
+
+    <div class="score-container">
+        <div class="score-item" id="player-Score">0</div>
+        <div class="score-item" id="computer-Score">0</div>
+    </div>
 </body>
 </html>
