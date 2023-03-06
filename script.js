@@ -13,6 +13,14 @@ let restartButton = document.getElementById("restart");
 // 1 = Paper
 // 2 = Scissors
 
+//start game if page was reloaded
+window.onload = function() {
+    var reloading = sessionStorage.getItem("reloading");
+    if (reloading) {
+        sessionStorage.removeItem("reloading");
+        game();
+    }
+}
 
 //Add eventListener for the start and restart button
 startButton.addEventListener('click', function () {game()}, {once: true})
