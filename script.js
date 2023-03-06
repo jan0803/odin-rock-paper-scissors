@@ -57,14 +57,29 @@ function playRound(playerSel, computerSel) {
         ){
         playerScoreValue++;
         document.getElementById("player-score").innerHTML = playerScoreValue;
-        document.getElementById("display-text").innerHTML = "Player scored!";
+        document.getElementById("display-text").innerHTML = 
+            `Player won this round with ${getNameOfValue(playerSel)}! The Computer chose ${getNameOfValue(computerSel)}`;
     }
     else {
         computerScoreValue++;
         document.getElementById("computer-score").innerHTML = computerScoreValue;
-        document.getElementById("display-text").innerHTML = "Computer scored!";
+        document.getElementById("display-text").innerHTML =
+            `Computer won this round with ${getNameOfValue(computerSel)}! The Player chose ${getNameOfValue(playerSel)}`;
     }
 
+}
+
+//basic function to convert the int value to string
+function getNameOfValue(number) {
+    if (number === 0) {
+        return "Rock";
+    }
+    else if (number === 1) {
+        return "Paper";
+    }
+    else {
+        return "Scissors";
+    }
 }
 
 //to get a random choice for the computer, gives one of those values: 0,1,2
