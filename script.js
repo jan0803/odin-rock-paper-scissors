@@ -32,15 +32,8 @@ function game() {
 
 //restartGame function to reset the score and start the game
 function restartGame() {
-    document.getElementById("display-text").innerHTML = "Press Start!";
-
-    playerScoreValue = 0;
-    computerScoreValue = 0;
-
-    document.getElementById("player-score").innerHTML = playerScoreValue;
-    document.getElementById("computer-score").innerHTML = computerScoreValue;
-
-    game();
+    sessionStorage.setItem("reloading", "true");
+    document.location.reload();
 }
 
 
@@ -85,6 +78,5 @@ function getNameOfValue(number) {
 //to get a random choice for the computer, gives one of those values: 0,1,2
 function getComputerChoice() {
     let computerChoiceNumber = Math.floor(Math.random()*3);
-    console.log(`Computer makes this choice: ${computerChoiceNumber}`);
     return computerChoiceNumber;
 }
