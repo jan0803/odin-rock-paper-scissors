@@ -4,6 +4,7 @@ let rockButton = document.getElementById("rock");
 let paperButton = document.getElementById("paper");
 let scissorsButton = document.getElementById("scissors");
 let startButton = document.getElementById("start");
+let restartButton = document.getElementById("restart");
 
 function getComputerChoice() {
     let computerChoiceNumber = Math.floor(Math.random()*3);
@@ -37,6 +38,8 @@ function playRound(playerSel, computerSel) {
 
 }
 
+startButton.addEventListener('click', function () {game()})
+restartButton.addEventListener('click', function () {restartGame()})
 
 function game() {
     playerScoreValue = 0;
@@ -47,7 +50,17 @@ function game() {
     rockButton.addEventListener('click', function () {playRound(0,getComputerChoice())});
     paperButton.addEventListener('click', function () {playRound(1,getComputerChoice())});
     scissorsButton.addEventListener('click', function () {playRound(2,getComputerChoice())});
+}
 
+function restartGame() {
+    console.clear();
 
+    playerScoreValue = 0;
+    computerScoreValue = 0;
+
+    document.getElementById("player-score").innerHTML = playerScoreValue;
+    document.getElementById("computer-score").innerHTML = computerScoreValue;
+
+    game();
 }
 
