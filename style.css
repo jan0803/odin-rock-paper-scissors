@@ -51,6 +51,20 @@ button {
     background-color: white;
     border: none;
     border-radius: 1em;
+    opacity: 90%;
+    box-shadow: 0px 0px 20px -10px rgb(34, 34, 34);
+}
+
+button:hover {
+    opacity: 100%;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0px 0px 35px 0px rgb(8, 8, 8);
+    scale: 1.05;
+}
+
+button:active {
+    opacity: 60%;
+    transition: 0.05s;
 }
 
 .option-container > button {
@@ -116,6 +130,7 @@ button > img {
     background: rgb(43,86,98);
     background: linear-gradient(203deg, rgba(43,86,98,0.5) 0%, rgba(21,40,57,0.5) 70%, rgba(15,27,45,0.5) 100%); 
     border-radius: 1em;
+    box-shadow: 0px 0px 20px -10px rgb(34, 34, 34);
 }
 
 .score-text {
