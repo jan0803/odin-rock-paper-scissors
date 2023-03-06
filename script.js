@@ -15,7 +15,7 @@ let restartButton = document.getElementById("restart");
 
 
 //Add eventListener for the start and restart button
-startButton.addEventListener('click', function () {game()})
+startButton.addEventListener('click', function () {game()}, {once: true})
 restartButton.addEventListener('click', function () {restartGame()})
 
 //game function to start the game and to add eventListener to the other buttons
