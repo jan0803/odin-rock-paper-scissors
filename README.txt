@@ -8,6 +8,7 @@ The things I learnd:
 - Designing the functions and having to plan everything
 - Problemsolving of given Problems
 - Working with a lot of flex in CSS
+- Transition, box-shadow, opacity and scale in css
 
 
 Icons from here: https://www.vecteezy.com/free-vector/rock-paper-scissors
