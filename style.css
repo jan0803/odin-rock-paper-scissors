@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
 
 * {
-    font-family: 'Golos Text', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -13,4 +14,121 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    background: rgb(43,86,98);
+    background: linear-gradient(135deg, rgba(43,86,98,1) 0%, rgba(21,40,57,1) 40%, rgba(15,27,45,1) 100%);  
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: rgb(225, 227, 233);
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.intro-text, .display-text {
+    color: rgb(225, 227, 233);
+    margin: 0;
+    font-weight: 300;
+}
+
+.display-text {
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+.option-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+button {
+    background-color: white;
+    border: none;
+    border-radius: 1em;
+}
+
+.option-container > button {
+    width: 8rem;
+    height: auto;
+    padding: 0.5rem;
+    font-weight: 900;
+}
+
+.restart-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5%;
+    width: 100vw;
+}
+
+.selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw;
+}
+
+.selection-button {
+    width: 15rem;
+    height: 22rem;
+    padding: 1rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.button-title {
+    flex: 2;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+button > img {
+    flex: 3;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 15rem;
+    height: 22rem;
+    padding: 1rem 3rem 3rem;
+    background: rgb(43,86,98);
+    background: linear-gradient(203deg, rgba(43,86,98,0.5) 0%, rgba(21,40,57,0.5) 70%, rgba(15,27,45,0.5) 100%); 
+    border-radius: 1em;
+}
+
+.score-text {
+    flex: 2;
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgb(225, 227, 233);
+    text-align: center;
+}
+
+.score-number {
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgb(225, 227, 233);
+    text-align: center;
 }

@@ -9,9 +9,9 @@
 </head>
 <body>
 
-    <h1>Basic Game of Rock - Paper - Scissors</h1>
+    <h1>Rock-Paper-Scissors</h1>
 
-    <p class="intro-text">This is a game of Rock - Paper - Scissors, which is a project to practice HTML, CSS and JavaScript!</p>
+    <!-- <p class="intro-text">This is a game of Rock - Paper - Scissors, which is a project to practice HTML, CSS and JavaScript!</p> -->
 
     <p class="display-text" id="display-text">Press Start!</p>
 
@@ -20,32 +20,37 @@
         <button class="restart-button" id="restart">RESTART</button>
     </div>
 
-    <div class="selection-container">
-        <button class="selection-button" id="rock">
-            <p class="button-title">ROCK</p>
-            <img src="./images/rock.jpg" alt="ROCK">
-        </button>
-        <button class="selection-button" id="paper">
-            <p class="button-title">PAPER</p>
-            <img src="./images/paper.jpg" alt="PAPER">
-        </button>
-        <button class="selection-button" id="scissors">
-            <p class="button-title">SCISSORS</p>
-            <img src="./images/scissors.jpg" alt="SCISSORS">
-        </button>   
-    </div>
+    <div class="section-container">
+        <div class="score-container">
+            <div class="score-item">
+                <p class="score-text">Player Score</p>
+                <div class="score-number" id="player-score">0</div>
+            </div>
+        </div>
 
-    <div class="score-container">
-        <h2 class="score-title">Scores!</h2>
-        <div class="score-item">
-            <p class="score-text">Player Score</p>
-            <div class="score-number" id="player-score">0</div>
+        <div class="selection-container">
+            <button class="selection-button" id="rock">
+                <p class="button-title">ROCK</p>
+                <img src="./images/rock.jpg" alt="ROCK">
+            </button>
+            <button class="selection-button" id="paper">
+                <p class="button-title">PAPER</p>
+                <img src="./images/paper.jpg" alt="PAPER">
+            </button>
+            <button class="selection-button" id="scissors">
+                <p class="button-title">SCISSORS</p>
+                <img src="./images/scissors.jpg" alt="SCISSORS">
+            </button>
         </div>
-        <div class="score-item" >
-            <p class="score-text">Computer Score</p>
-            <div class="score-number" id="computer-score">0</div>
+
+        <div class="score-container">
+            <div class="score-item" >
+                <p class="score-text">Computer Score</p>
+                <div class="score-number" id="computer-score">0</div>
+            </div>
         </div>
     </div>
+    
 
     <script src="script.js"></script>
 </body>
